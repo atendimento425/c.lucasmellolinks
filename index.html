@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Instituto Solaryz · C. Lucas Mello</title>
-<meta name="description" content="Instituto Solaryz · Despertar da Kundalini, Eventos e Método Solaryz. Mais de 2.000 pessoas transformadas.">
+<meta name="description" content="Instituto Solaryz · Despertar da Kundalini, Eventos e Método Solaryz. Mais de 2.000 mulheres transformadas.">
 <meta name="theme-color" content="#050505">
 <!-- Meta Pixel Code -->
 <script>
@@ -565,6 +565,70 @@ footer {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* WAITLIST NOTE — small caption above waitlist CTA */
+.waitlist-note {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-warm);
+  opacity: 0.85;
+  margin: 0 0 14px 0;
+  text-align: center;
+  width: 100%;
+}
+.waitlist-note strong {
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.18em;
+}
+
+/* FORMACAO CARD — clean section card for waitlist */
+.formacao-card {
+  margin-top: 36px;
+  padding: 28px 24px;
+  background: linear-gradient(180deg, rgba(201,168,76,0.04) 0%, rgba(201,168,76,0.02) 100%);
+  border: 1px solid var(--gold-line);
+  border-radius: 4px;
+  text-align: center;
+}
+.formacao-label {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+}
+.formacao-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #f4ead2;
+  margin: 0 0 14px 0;
+}
+.formacao-title em {
+  font-style: italic;
+  color: var(--gold-warm);
+}
+.formacao-copy {
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #c8b888;
+  margin: 0 0 22px 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.formacao-copy strong { color: #f4ead2; font-weight: 500; }
+.btn-formacao { width: 100%; max-width: 380px; margin: 0 auto; }
+
 /* ─────────── MOBILE ─────────── */
 @media (max-width: 1024px) {
   section[id] { scroll-margin-top: 70px; }
@@ -606,6 +670,11 @@ footer {
   .yt-text-main { font-size: 17px; }
   .yt-icon { width: 42px; height: 42px; }
   .yt-icon svg { width: 19px; height: 19px; }
+
+  .formacao-card { padding: 24px 18px; margin-top: 28px; }
+  .formacao-title { font-size: 26px; }
+  .formacao-copy { font-size: 14px; }
+  .waitlist-note { font-size: 11px; letter-spacing: 0.16em; }
 }
 @media (max-width: 480px) {
   .nav { padding: 11px 12px; }
@@ -712,8 +781,9 @@ footer {
       </a>
 
       <div class="actions reveal">
-        <a href="https://wa.me/554899090538?text=Quero%20o%20Despertar%20da%20Kundalini%20Solaryz" target="_blank" rel="noopener" class="btn btn-primary">
-          Quero o Despertar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        <p class="waitlist-note">Lançamento em breve · <strong>Lista de espera aberta</strong></p>
+        <a href="https://wa.me/554899090538?text=Quero%20entrar%20na%20lista%20de%20espera%20do%20Despertar%20da%20Kundalini%20Solaryz" target="_blank" rel="noopener" class="btn btn-primary">
+          Quero entrar na lista de espera <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
     </div>
@@ -732,13 +802,14 @@ footer {
           <h3 class="evento-card-name">Ativação<br>da<br><em>Prosperidade</em></h3>
           <ul class="evento-themes">
             <li>Ativação da Kundalini Solaryz</li>
+            <li>Constelação Solaryz</li>
             <li>Crenças limitantes &amp; mentalidade</li>
             <li>Desbloqueio energético</li>
           </ul>
         </div>
 
         <div class="evento-card-bottom">
-          <p class="evento-card-datetime">01 · MAIO · 16H00 · 2 HORAS</p>
+          <p class="evento-card-datetime">23 · MAIO · 16H00 · 2 HORAS</p>
           <p class="evento-card-where">Presencial + Online</p>
           <p class="evento-card-loc">Av. Cruz e Souza, 560<br>Campinas · São José, SC</p>
         </div>
@@ -775,6 +846,17 @@ footer {
       <div class="actions reveal">
         <a href="https://wa.me/554899090538?text=Quero%20conhecer%20o%20M%C3%A9todo%20Solaryz" target="_blank" rel="noopener" class="btn btn-primary">
           Quero conhecer o Método <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="formacao-card reveal">
+        <span class="formacao-label">Formação · Lista de Espera</span>
+        <h3 class="formacao-title">Formação Kundalini <em>Solaryz</em></h3>
+        <p class="formacao-copy">
+          Para quem quer ir além — e se tornar um <strong>facilitador</strong>. Processo presencial de imersão profunda, conduzido por Lucas Mello. Vagas extremamente limitadas.
+        </p>
+        <a href="https://wa.me/554899090538?text=Quero%20entrar%20na%20lista%20de%20espera%20da%20Forma%C3%A7%C3%A3o%20Kundalini%20Solaryz" target="_blank" rel="noopener" class="btn btn-ghost btn-formacao">
+          Quero entrar na lista de espera <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
     </div>
