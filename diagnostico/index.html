@@ -5,21 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diagnóstico Solaryz · Descubra a raiz do que trava a sua vida</title>
 <meta name="description" content="Atendimento individual online. Encontre a raiz inconsciente do que trava as suas relações, o seu financeiro e a sua energia.">
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','3401469546815808');fbq('track','PageView');</script>
+
+<!-- OTIMIZAÇÃO: Pré-conexão para carregar as fontes mais rápido -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','3401469546815808');fbq('track','PageView');</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --gold:#C9A84C;--gl:#F0D080;--gd:#8B6510;
-  --black:#080808;--card:#101010;--white:#F5F0E6;
-  --dim:rgba(245,240,230,.6);
+  /* OTIMIZAÇÃO ACESSIBILIDADE: Contraste melhorado para o PageSpeed */
+  --black:#050505;--card:#111111;--white:#FFF5E1;
+  --dim:rgba(255,245,225,.75);
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Jost',sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%;height:auto}
+img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(height);}
 .wrap{max-width:560px;margin:0 auto;padding:0 22px}
 
 /* LOGO TOPO */
@@ -33,14 +40,9 @@ img{display:block;max-width:100%;height:auto}
 .hero .sub{font-size:14px;letter-spacing:.04em;color:var(--dim);margin-bottom:24px}
 
 /* VIDEO PRINCIPAL */
-.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:24px}
+.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:24px;background:#000}
 .video iframe,.video > div{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-
-/* BLOQUEIO DE CLIQUES NO VÍDEO PRINCIPAL */
-#videoWrap iframe {
-  pointer-events: none;
-}
-
+#videoWrap iframe {pointer-events: none;}
 #playOverlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;z-index:5}
 #playOverlay .btn{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
 #playOverlay .tri{width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #180f00;margin-left:4px}
@@ -84,11 +86,11 @@ img{display:block;max-width:100%;height:auto}
 
 /* DEPOIMENTOS PRINTS */
 .depos{display:flex;flex-direction:column;gap:14px;margin-bottom:6px}
-.depo-print{width:100%;border:1px solid rgba(201,168,76,.18);border-radius:14px}
+.depo-print{width:100%;border:1px solid rgba(201,168,76,.18);border-radius:14px;background:#111}
 .depo-videos{display:flex;flex-direction:column;gap:14px;margin-bottom:22px}
 
 /* HISTÓRIA */
-.hist-photo{width:100%;border-radius:18px;border:1px solid rgba(201,168,76,.25);margin-bottom:22px}
+.hist-photo{width:100%;border-radius:18px;border:1px solid rgba(201,168,76,.25);margin-bottom:22px;background:#111}
 .hist p{font-size:15.5px;line-height:1.85;color:var(--dim);margin-bottom:15px}
 .hist strong{color:var(--white);font-weight:500}
 .hist .nome{font-family:var(--serif);font-size:26px;font-style:italic;color:var(--gold);margin-bottom:4px}
@@ -184,9 +186,10 @@ img{display:block;max-width:100%;height:auto}
     <span class="eyebrow">O que acontece quando a raiz é encontrada</span>
     <h2>Histórias <em>reais</em> de transformação</h2>
     <div class="depo-videos">
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/RZHASvzrz74?rel=0&playsinline=1&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/V9PAOxx55uE?rel=0&playsinline=1&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/yNZdo8_tbvg?rel=0&playsinline=1&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+      <!-- OTIMIZAÇÃO: srcdoc nos iframes secundários para não bloquear o carregamento da página -->
+      <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/RZHASvzrz74?autoplay=1><img src=https://img.youtube.com/vi/RZHASvzrz74/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/RZHASvzrz74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
+      <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/V9PAOxx55uE?autoplay=1><img src=https://img.youtube.com/vi/V9PAOxx55uE/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/V9PAOxx55uE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
+      <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/yNZdo8_tbvg?autoplay=1><img src=https://img.youtube.com/vi/yNZdo8_tbvg/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/yNZdo8_tbvg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
     </div>
 
     <div class="depos">
@@ -212,7 +215,7 @@ img{display:block;max-width:100%;height:auto}
   <!-- HISTÓRIA -->
   <section class="sec hist">
     <span class="eyebrow">Fundador do Método</span>
-    <img class="hist-photo" src="C.LUCASMELLO SITE.jpeg" alt="C. Lucas Mello" loading="lazy">
+    <img class="hist-photo" src="C.LUCASMELLO SITE.jpeg" alt="C. Lucas Mello" loading="lazy" width="800" height="1200">
     <p class="nome">C. Lucas Mello</p>
     <p class="cargo">Fundador do Instituto Solaryz</p>
     <p>Parabéns por chegar até aqui.</p>
@@ -238,37 +241,44 @@ img{display:block;max-width:100%;height:auto}
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- VÍDEO SEM PULAR -->
-<script>
-var ytPlayer, maxTimeAssistido = 0;
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.body.appendChild(tag);
-
-function onYouTubeIframeAPIReady() {
-  ytPlayer = new YT.Player('ytplayer', {
-    videoId: '7ahmj3TNMcI',
-    playerVars: { controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1, fs: 0 },
-    events: { onStateChange: onStateChange }
+<!-- OTIMIZAÇÃO: O script do YouTube agora só carrega DEPOIS que o site já estiver visível -->
+<script defer>
+  window.addEventListener('load', function() {
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   });
-}
-function iniciarVideo() {
-  document.getElementById('playOverlay').style.display = 'none';
-  ytPlayer.playVideo();
-}
-function onStateChange(e) {
-  if (e.data === YT.PlayerState.PLAYING) {
-    clearInterval(window._guardaAvanco);
-    window._guardaAvanco = setInterval(function () {
-      var atual = ytPlayer.getCurrentTime();
-      if (atual > maxTimeAssistido + 1.5) {
-        ytPlayer.seekTo(maxTimeAssistido, true);
-      } else {
-        maxTimeAssistido = atual;
-      }
-    }, 250);
+
+  var ytPlayer, maxTimeAssistido = 0;
+  function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('ytplayer', {
+      videoId: '7ahmj3TNMcI',
+      playerVars: { controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1, fs: 0 },
+      events: { onStateChange: onStateChange }
+    });
   }
-}
+
+  function iniciarVideo() {
+    document.getElementById('playOverlay').style.display = 'none';
+    if(ytPlayer && ytPlayer.playVideo) {
+      ytPlayer.playVideo();
+    }
+  }
+
+  function onStateChange(e) {
+    if (e.data === YT.PlayerState.PLAYING) {
+      clearInterval(window._guardaAvanco);
+      window._guardaAvanco = setInterval(function () {
+        var atual = ytPlayer.getCurrentTime();
+        if (atual > maxTimeAssistido + 1.5) {
+          ytPlayer.seekTo(maxTimeAssistido, true);
+        } else {
+          maxTimeAssistido = atual;
+        }
+      }, 250);
+    }
+  }
 </script>
 
 </body>
