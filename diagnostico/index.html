@@ -19,7 +19,6 @@
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-/* CORREÇÃO APLICADA AQUI: height: auto para não distorcer as imagens */
 img{display:block;max-width:100%;height:auto}
 .wrap{max-width:560px;margin:0 auto;padding:0 22px}
 
@@ -33,9 +32,15 @@ img{display:block;max-width:100%;height:auto}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero .sub{font-size:14px;letter-spacing:.04em;color:var(--dim);margin-bottom:24px}
 
-/* VIDEO */
+/* VIDEO PRINCIPAL */
 .video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:24px}
 .video iframe,.video > div{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* BLOQUEIO DE CLIQUES NO VÍDEO PRINCIPAL */
+#videoWrap iframe {
+  pointer-events: none;
+}
+
 #playOverlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;z-index:5}
 #playOverlay .btn{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
 #playOverlay .tri{width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #180f00;margin-left:4px}
@@ -185,7 +190,6 @@ img{display:block;max-width:100%;height:auto}
     </div>
 
     <div class="depos">
-      <!-- FOTOS DOS DEPOIMENTOS AGORA NÃO ESTICAM MAIS -->
       <img class="depo-print" src="depo1.jpg" alt="Depoimento de aluno Solaryz" loading="lazy" width="800" height="1777">
       <img class="depo-print" src="depo2.jpg" alt="Depoimento de aluno Solaryz" loading="lazy" width="800" height="740">
       <img class="depo-print" src="depo4.jpg" alt="Depoimento de aluno Solaryz" loading="lazy" width="800" height="643">
