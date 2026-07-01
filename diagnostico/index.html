@@ -6,7 +6,6 @@
 <title>Diagnóstico Solaryz · Descubra a raiz do que trava a sua vida</title>
 <meta name="description" content="Atendimento individual online. Encontre a raiz inconsciente do que trava as suas relações, o seu financeiro e a sua energia.">
 
-<!-- OTIMIZAÇÃO: Pré-conexão para carregar as fontes mais rápido -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,7 +16,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --gold:#C9A84C;--gl:#F0D080;--gd:#8B6510;
-  /* OTIMIZAÇÃO ACESSIBILIDADE: Contraste melhorado para o PageSpeed */
   --black:#050505;--card:#111111;--white:#FFF5E1;
   --dim:rgba(255,245,225,.75);
   --serif:'Cormorant Garamond',Georgia,serif;
@@ -26,89 +24,86 @@
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
+/* Correção de CLS para imagens manterem proporção */
 img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(height);}
 .wrap{max-width:560px;margin:0 auto;padding:0 22px}
 
-/* LOGO TOPO */
-.topbar{text-align:center;padding:24px 0 18px}
+/* LOGO TOPO - Mais compacto */
+.topbar{text-align:center;padding:16px 0 12px}
 .topbar .logo{font-family:'Cinzel',serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;background:linear-gradient(180deg,var(--gl),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-/* HERO */
-.hero{text-align:center;padding:18px 0 30px}
-.hero h1{font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-weight:400;line-height:1.18;margin-bottom:14px}
+/* HERO - Mais junto */
+.hero{text-align:center;padding:12px 0 24px}
+.hero h1{font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-weight:400;line-height:1.18;margin-bottom:12px}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.hero .sub{font-size:14px;letter-spacing:.04em;color:var(--dim);margin-bottom:24px}
+.hero .sub{font-size:14px;letter-spacing:.04em;color:var(--dim);margin-bottom:20px}
 
 /* VIDEO PRINCIPAL */
-.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:24px;background:#000}
+.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:20px;background:#000}
 .video iframe,.video > div{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-#videoWrap iframe {pointer-events: none;}
 #playOverlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;z-index:5}
 #playOverlay .btn{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
 #playOverlay .tri{width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #180f00;margin-left:4px}
 
 /* CTA BTN */
-.cta{display:block;width:100%;background:linear-gradient(135deg,var(--gl) 0%,var(--gold) 55%,var(--gd) 100%);color:#180f00;font-family:'Cinzel',serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-align:center;text-transform:uppercase;padding:18px;border-radius:13px;box-shadow:0 6px 26px rgba(201,168,76,.3);transition:transform .15s}
+.cta{display:block;width:100%;background:linear-gradient(135deg,var(--gl) 0%,var(--gold) 55%,var(--gd) 100%);color:#180f00;font-family:'Cinzel',serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-align:center;text-transform:uppercase;padding:16px;border-radius:12px;box-shadow:0 6px 26px rgba(201,168,76,.25);transition:transform .15s}
 .cta:active{transform:scale(.98)}
-.cta-note{text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:12px}
+.cta-note{text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:10px}
 
-/* SECTIONS */
-.sec{padding:40px 0;border-top:1px solid rgba(201,168,76,.12)}
-.eyebrow{display:inline-block;font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);color:var(--gl);padding:5px 14px;border-radius:20px;margin-bottom:18px}
-.sec h2{font-family:var(--serif);font-size:clamp(26px,6vw,36px);font-weight:400;line-height:1.2;margin-bottom:18px}
+/* SECTIONS - Espaçamento reduzido */
+.sec{padding:32px 0;border-top:1px solid rgba(201,168,76,.12)}
+.eyebrow{display:inline-block;font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);color:var(--gl);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.sec h2{font-family:var(--serif);font-size:clamp(24px,6vw,34px);font-weight:400;line-height:1.2;margin-bottom:16px}
 .sec h2 em{font-style:italic;color:var(--gold)}
 
 /* DOR */
-.dor p{font-size:16px;line-height:1.85;color:var(--dim);margin-bottom:16px}
+.dor p{font-size:15.5px;line-height:1.8;color:var(--dim);margin-bottom:14px}
 .dor strong{color:var(--white);font-weight:500}
-.dor .punch{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--gold);line-height:1.4;margin:8px 0 4px}
+.dor .punch{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--gold);line-height:1.4;margin:4px 0}
 
-/* ETAPAS */
-.etapa{background:var(--card);border:1px solid rgba(201,168,76,.18);border-radius:16px;padding:24px 22px;margin-bottom:12px}
-.etapa-n{font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
-.etapa-t{font-family:var(--serif);font-size:22px;color:var(--white);margin-bottom:8px}
-.etapa-d{font-size:14.5px;line-height:1.7;color:var(--dim)}
+/* ETAPAS - Mais compactas */
+.etapa{background:var(--card);border:1px solid rgba(201,168,76,.18);border-radius:14px;padding:20px 18px;margin-bottom:10px}
+.etapa-n{font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
+.etapa-t{font-family:var(--serif);font-size:20px;color:var(--white);margin-bottom:6px}
+.etapa-d{font-size:14px;line-height:1.65;color:var(--dim)}
 
-/* GARANTIAS */
-.gar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
-.gar-item{background:var(--card);border:1px solid rgba(201,168,76,.18);border-radius:12px;padding:16px 14px;text-align:center}
-.gar-item .ico{font-size:22px;margin-bottom:6px}
-.gar-item .t{font-size:13px;color:var(--white);letter-spacing:.03em;line-height:1.4}
-.gar-item .s{font-size:11px;color:var(--dim);margin-top:3px}
+/* GARANTIAS - Novo Layout Clean em Lista */
+.gar{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.gar-item{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(201,168,76,.1)}
+.gar-item:last-child{border-bottom:none}
+.gar-item .ico{font-size:26px;opacity:0.9}
+.gar-item .t{font-size:15px;font-weight:500;color:var(--white);letter-spacing:.02em;margin-bottom:2px}
+.gar-item .s{font-size:13px;color:var(--dim)}
 
 /* OFERTA */
-.oferta{text-align:center;background:linear-gradient(145deg,#161616,#0c0c0c);border:1px solid rgba(201,168,76,.4);border-radius:20px;padding:32px 24px;box-shadow:0 0 30px rgba(201,168,76,.08)}
-.oferta .label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.oferta .de{font-size:16px;color:var(--dim);text-decoration:line-through;margin-bottom:2px}
-.oferta .por{font-family:var(--serif);font-size:52px;font-weight:600;color:var(--gl);line-height:1;margin-bottom:6px}
-.oferta .moeda{font-size:24px;vertical-align:super}
-.oferta .cond{font-size:13px;color:var(--dim);margin-bottom:22px}
+.oferta{text-align:center;background:linear-gradient(145deg,#141414,#0a0a0a);border:1px solid rgba(201,168,76,.3);border-radius:18px;padding:28px 20px;box-shadow:0 0 30px rgba(201,168,76,.06)}
+.oferta .label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.oferta .de{font-size:15px;color:var(--dim);text-decoration:line-through;margin-bottom:0}
+.oferta .por{font-family:var(--serif);font-size:48px;font-weight:600;color:var(--gl);line-height:1;margin-bottom:6px}
+.oferta .moeda{font-size:22px;vertical-align:super}
+.oferta .cond{font-size:13px;color:var(--dim);margin-bottom:20px}
 
-/* DEPOIMENTOS PRINTS */
-.depos{display:flex;flex-direction:column;gap:14px;margin-bottom:6px}
-.depo-print{width:100%;border:1px solid rgba(201,168,76,.18);border-radius:14px;background:#111}
-.depo-videos{display:flex;flex-direction:column;gap:14px;margin-bottom:22px}
+/* DEPOIMENTOS */
+.depos{display:flex;flex-direction:column;gap:12px;margin-bottom:6px}
+.depo-print{width:100%;border:1px solid rgba(201,168,76,.18);border-radius:12px;background:#111}
+.depo-videos{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
 
 /* HISTÓRIA */
-.hist-photo{width:100%;border-radius:18px;border:1px solid rgba(201,168,76,.25);margin-bottom:22px;background:#111}
-.hist p{font-size:15.5px;line-height:1.85;color:var(--dim);margin-bottom:15px}
+.hist-photo{width:100%;border-radius:16px;border:1px solid rgba(201,168,76,.25);margin-bottom:18px;background:#111}
+.hist p{font-size:15.5px;line-height:1.8;color:var(--dim);margin-bottom:14px}
 .hist strong{color:var(--white);font-weight:500}
-.hist .nome{font-family:var(--serif);font-size:26px;font-style:italic;color:var(--gold);margin-bottom:4px}
-.hist .cargo{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
+.hist .nome{font-family:var(--serif);font-size:26px;font-style:italic;color:var(--gold);margin-bottom:2px}
+.hist .cargo{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
 
 /* FOOTER */
-.footer{text-align:center;padding:36px 22px 60px;border-top:1px solid rgba(201,168,76,.12)}
-.footer .logo{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.footer p{font-size:12.5px;color:rgba(245,240,230,.4);line-height:1.9}
+.footer{text-align:center;padding:28px 22px 50px;border-top:1px solid rgba(201,168,76,.12)}
+.footer .logo{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.footer p{font-size:12px;color:rgba(255,245,225,.4);line-height:1.8}
 .footer a{color:rgba(201,168,76,.6)}
 
 /* WA FLOAT */
-.wa-float{position:fixed;bottom:22px;right:18px;z-index:200;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4)}
+.wa-float{position:fixed;bottom:22px;right:18px;z-index:200;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.3)}
 .wa-float svg{width:28px;height:28px;fill:#fff}
-
-@media(max-width:430px){
-  .gar{grid-template-columns:1fr}
-}
 </style>
 </head>
 <body>
@@ -145,7 +140,7 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
     <p>Mas tudo isso é reflexo de uma causa mais profunda, <strong>inconsciente</strong>. Sem encontrá-la, não existe libertação real.</p>
     <p class="punch">A transformação começa na raiz.</p>
     <p>Você não precisa passar anos em terapia. Você precisa encontrar a origem e tratar o que está escondido.</p>
-    <a href="https://chk.eduzz.com/7WXGVB120A" target="_blank" rel="noopener" class="cta" style="margin-top:10px">Quero encontrar a minha raiz</a>
+    <a href="https://chk.eduzz.com/7WXGVB120A" target="_blank" rel="noopener" class="cta" style="margin-top:8px">Quero encontrar a minha raiz</a>
   </section>
 
   <!-- O QUE VOCÊ TERÁ -->
@@ -169,15 +164,39 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
     </div>
   </section>
 
-  <!-- GARANTIAS -->
+  <!-- GARANTIAS (Novo Design Limpo) -->
   <section class="sec">
     <span class="eyebrow">Tudo pensado para você</span>
     <h2>Segurança e <em>privacidade</em> total</h2>
     <div class="gar">
-      <div class="gar-item"><div class="ico">🔒</div><div class="t">Sigilo absoluto</div><div class="s">O que é dito, fica entre nós</div></div>
-      <div class="gar-item"><div class="ico">🕊️</div><div class="t">Zero julgamentos</div><div class="s">Espaço seguro para se abrir</div></div>
-      <div class="gar-item"><div class="ico">💻</div><div class="t">100% online</div><div class="s">Sem precisar sair de casa</div></div>
-      <div class="gar-item"><div class="ico">⚡</div><div class="t">Você sente já</div><div class="s">Resultado na primeira sessão</div></div>
+      <div class="gar-item">
+        <div class="ico">🔒</div>
+        <div>
+          <div class="t">Sigilo absoluto</div>
+          <div class="s">O que é dito, fica entre nós</div>
+        </div>
+      </div>
+      <div class="gar-item">
+        <div class="ico">🕊️</div>
+        <div>
+          <div class="t">Zero julgamentos</div>
+          <div class="s">Espaço seguro para se abrir</div>
+        </div>
+      </div>
+      <div class="gar-item">
+        <div class="ico">💻</div>
+        <div>
+          <div class="t">100% online</div>
+          <div class="s">Sem precisar sair de casa</div>
+        </div>
+      </div>
+      <div class="gar-item">
+        <div class="ico">⚡</div>
+        <div>
+          <div class="t">Você sente já</div>
+          <div class="s">Resultado na primeira sessão</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -186,13 +205,13 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
     <span class="eyebrow">O que acontece quando a raiz é encontrada</span>
     <h2>Histórias <em>reais</em> de transformação</h2>
     <div class="depo-videos">
-      <!-- OTIMIZAÇÃO: srcdoc nos iframes secundários para não bloquear o carregamento da página -->
       <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/RZHASvzrz74?autoplay=1><img src=https://img.youtube.com/vi/RZHASvzrz74/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/RZHASvzrz74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
       <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/V9PAOxx55uE?autoplay=1><img src=https://img.youtube.com/vi/V9PAOxx55uE/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/V9PAOxx55uE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
       <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/yNZdo8_tbvg?autoplay=1><img src=https://img.youtube.com/vi/yNZdo8_tbvg/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/yNZdo8_tbvg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
     </div>
 
     <div class="depos">
+      <!-- Dimensões exatas mantidas para evitar CLS -->
       <img class="depo-print" src="depo1.jpg" alt="Depoimento de aluno Solaryz" loading="lazy" width="800" height="1777">
       <img class="depo-print" src="depo2.jpg" alt="Depoimento de aluno Solaryz" loading="lazy" width="800" height="740">
       <img class="depo-print" src="depo4.jpg" alt="Depoimento de aluno Solaryz" loading="lazy" width="800" height="643">
@@ -241,16 +260,16 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- OTIMIZAÇÃO: O script do YouTube agora só carrega DEPOIS que o site já estiver visível -->
-<script defer>
-  window.addEventListener('load', function() {
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  });
-
+<!-- SCRIPT DO VÍDEO (Carregamento Imediato para evitar falhas no Play) -->
+<script>
   var ytPlayer, maxTimeAssistido = 0;
+  
+  // Carrega a API do YouTube sem bloquear a tela, mas sem atraso
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
   function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player('ytplayer', {
       videoId: '7ahmj3TNMcI',
@@ -260,8 +279,8 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
   }
 
   function iniciarVideo() {
-    document.getElementById('playOverlay').style.display = 'none';
     if(ytPlayer && ytPlayer.playVideo) {
+      document.getElementById('playOverlay').style.display = 'none';
       ytPlayer.playVideo();
     }
   }
