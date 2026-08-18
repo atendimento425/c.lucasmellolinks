@@ -6,7 +6,7 @@
 <title>Diagnóstico Solaryz · Descubra a raiz do que trava a sua vida</title>
 <meta name="description" content="Atendimento individual online. Encontre a raiz inconsciente do que trava as suas relações, o seu financeiro e a sua energia.">
 
-<!-- OTIMIZAÇÃO: Fontes Assíncronas (Zera o bloqueio de renderização) -->
+<!-- OTIMIZAÇÃO: Fontes Assíncronas -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap">
@@ -30,7 +30,7 @@
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(height);}
+img{display:block;max-width:100%;height:auto;}
 .wrap{max-width:560px;margin:0 auto;padding:0 22px}
 
 /* LOGO TOPO */
@@ -41,23 +41,26 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 .hero{text-align:center;padding:12px 0 24px}
 .hero h1{font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-weight:400;line-height:1.18;margin-bottom:12px}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.hero .sub{font-size:14px;letter-spacing:.04em;color:var(--dim);margin-bottom:20px}
+.hero .sub{font-size:15px;letter-spacing:.02em;color:var(--dim);margin-bottom:20px}
 
 /* VIDEO PRINCIPAL */
-.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:20px;background:#000}
+.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:20px;background:#000;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
 .video iframe,.video > div{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-#playOverlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;z-index:5}
-#playOverlay .btn{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
-#playOverlay .tri{width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #180f00;margin-left:4px}
+#playOverlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);cursor:pointer;z-index:5}
+
+/* ANIMAÇÃO PLAY */
+@keyframes pulsePlay { 0% { box-shadow: 0 0 0 0 rgba(201,168,76,0.7); } 70% { box-shadow: 0 0 0 20px rgba(201,168,76,0); } 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); } }
+#playOverlay .btn{width:68px;height:68px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center; animation: pulsePlay 2s infinite;}
+#playOverlay .tri{width:0;height:0;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent #180f00;margin-left:6px}
 
 /* CTA BTN */
-.cta{display:block;width:100%;background:linear-gradient(135deg,var(--gl) 0%,var(--gold) 55%,var(--gd) 100%);color:#180f00;font-family:'Cinzel',serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-align:center;text-transform:uppercase;padding:16px;border-radius:12px;box-shadow:0 6px 26px rgba(201,168,76,.25);transition:transform .15s}
+.cta{display:block;width:100%;background:linear-gradient(135deg,var(--gl) 0%,var(--gold) 55%,var(--gd) 100%);color:#180f00;font-family:'Cinzel',serif;font-size:15px;font-weight:700;letter-spacing:1.2px;text-align:center;text-transform:uppercase;padding:18px;border-radius:12px;box-shadow:0 6px 26px rgba(201,168,76,.25);transition:transform .15s}
 .cta:active{transform:scale(.98)}
-.cta-note{text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:10px}
+.cta-note{text-align:center;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);margin-top:10px;font-weight:500;}
 
 /* SECTIONS */
 .sec{padding:32px 0;border-top:1px solid rgba(201,168,76,.12)}
-.eyebrow{display:inline-block;font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);color:var(--gl);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.eyebrow{display:inline-block;font-family:'Cinzel',serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gl);padding:6px 14px;border-radius:20px;margin-bottom:16px}
 .sec h2{font-family:var(--serif);font-size:clamp(24px,6vw,34px);font-weight:400;line-height:1.2;margin-bottom:16px}
 .sec h2 em{font-style:italic;color:var(--gold)}
 
@@ -81,12 +84,12 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 .gar-item .s{font-size:13px;color:var(--dim)}
 
 /* OFERTA */
-.oferta{text-align:center;background:linear-gradient(145deg,#141414,#0a0a0a);border:1px solid rgba(201,168,76,.3);border-radius:18px;padding:28px 20px;box-shadow:0 0 30px rgba(201,168,76,.06)}
-.oferta .label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.oferta{text-align:center;background:linear-gradient(145deg,#141414,#0a0a0a);border:1px solid rgba(201,168,76,.4);border-radius:18px;padding:32px 20px;box-shadow:0 0 35px rgba(201,168,76,.1)}
+.oferta .label{font-family:'Cinzel',serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .oferta .de{font-size:15px;color:var(--dim);text-decoration:line-through;margin-bottom:0}
-.oferta .por{font-family:var(--serif);font-size:48px;font-weight:600;color:var(--gl);line-height:1;margin-bottom:6px}
-.oferta .moeda{font-size:22px;vertical-align:super}
-.oferta .cond{font-size:13px;color:var(--dim);margin-bottom:20px}
+.oferta .por{font-family:var(--serif);font-size:52px;font-weight:600;color:var(--gl);line-height:1;margin-bottom:6px}
+.oferta .moeda{font-size:24px;vertical-align:super}
+.oferta .cond{font-size:14px;color:var(--dim);margin-bottom:24px}
 
 /* DEPOIMENTOS */
 .depos{display:flex;flex-direction:column;gap:12px;margin-bottom:6px}
@@ -101,14 +104,20 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 .hist .cargo{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
 
 /* FOOTER */
-.footer{text-align:center;padding:28px 22px 50px;border-top:1px solid rgba(201,168,76,.12)}
+.footer{text-align:center;padding:28px 22px 100px;border-top:1px solid rgba(201,168,76,.12)} /* Padding bottom extra pro sticky CTA */
 .footer .logo{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .footer p{font-size:12px;color:rgba(255,245,225,.4);line-height:1.8}
 .footer a{color:rgba(201,168,76,.6)}
 
+/* STICKY CTA MOBILE */
+.sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(5, 5, 5, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 12px 22px 18px; border-top: 1px solid rgba(201,168,76,.3); z-index: 100; transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); display:flex; justify-content:center; box-shadow: 0 -10px 30px rgba(0,0,0,0.6);}
+.sticky-cta.show { transform: translateY(0); }
+.sticky-cta .cta { margin: 0; padding: 14px; font-size: 14px; max-width: 560px; box-shadow: none;}
+
 /* WA FLOAT */
-.wa-float{position:fixed;bottom:22px;right:18px;z-index:200;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.3)}
-.wa-float svg{width:28px;height:28px;fill:#fff}
+.wa-float{position:fixed;bottom:22px;right:18px;z-index:200;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4); transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);}
+.wa-float.lifted { bottom: 95px; } /* Sobe quando o Sticky CTA aparece */
+.wa-float svg{width:30px;height:30px;fill:#fff}
 </style>
 </head>
 <body>
@@ -122,8 +131,9 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 
   <!-- HERO -->
   <section class="hero">
+    <span class="eyebrow" style="margin-bottom: 12px;">Sessão Individual Online</span>
     <h1>Descubra a raiz <em>inconsciente</em> do que trava a sua vida.</h1>
-    <p class="sub">Assista o vídeo e entenda como funciona o atendimento</p>
+    <p class="sub">Assista ao vídeo para entender o mapeamento e agende seu horário.</p>
 
     <!-- VÍDEO PRINCIPAL -->
     <div class="video" id="videoWrap">
@@ -133,8 +143,9 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
       </div>
     </div>
 
-    <a href="https://chk.eduzz.com/7WXGVB120A" target="_blank" rel="noopener" class="cta">Quero resolver agora</a>
-    <p class="cta-note">Atendimento 100% online</p>
+    <!-- BOTÃO COM ÂNCORA DE PREÇO -->
+    <a href="https://chk.eduzz.com/7WXGVB120A" target="_blank" rel="noopener" class="cta" id="hero-cta">Agendar Diagnóstico (R$ 147)</a>
+    <p class="cta-note">1 Hora ao vivo com C. Lucas Mello</p>
   </section>
 
   <!-- DOR -->
@@ -207,7 +218,7 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 
   <!-- DEPOIMENTOS -->
   <section class="sec">
-    <span class="eyebrow">O que acontece quando a raiz é encontrada</span>
+    <span class="eyebrow">O que acontece na prática</span>
     <h2>Histórias <em>reais</em> de transformação</h2>
     <div class="depo-videos">
       <div class="video"><iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/RZHASvzrz74?autoplay=1><img src=https://img.youtube.com/vi/RZHASvzrz74/hqdefault.jpg alt='Video'><span>▶</span></a>" src="https://www.youtube-nocookie.com/embed/RZHASvzrz74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Depoimento"></iframe></div>
@@ -226,10 +237,10 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
   <!-- OFERTA -->
   <section class="sec">
     <div class="oferta">
-      <p class="label">Oportunidade especial</p>
+      <p class="label">Sua Avaliação Estratégica</p>
       <p class="de">De R$ 397,00</p>
       <p class="por"><span class="moeda">R$</span>147</p>
-      <p class="cond">Atendimento individual completo · 50 a 60 minutos</p>
+      <p class="cond">Atendimento individual · 50 a 60 minutos</p>
       <a href="https://chk.eduzz.com/7WXGVB120A" target="_blank" rel="noopener" class="cta">Garantir meu atendimento</a>
       <p class="cta-note">Vagas limitadas na agenda</p>
     </div>
@@ -242,7 +253,7 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
     <p class="nome">C. Lucas Mello</p>
     <p class="cargo">Fundador do Instituto Solaryz</p>
     <p>Parabéns por chegar até aqui.</p>
-    <p>Eu conheço esse lugar por dentro. Vivi os vícios. Vivi relações que me drenavam. Tentei salvar meus pais e carreguei por anos um peso que não era meu. Vivi uma vida que não prosperava. Fiz tudo o que mandavam, me esforcei, estudei, lutei. E mesmo assim, a vida não andava.</p>
+    <p>Eu conheço esse lugar por dentro. Vivi relações que me drenavam. Tentei salvar meus pais e carreguei por anos um peso que não era meu. Vivi uma vida que não prosperava. Fiz tudo o que mandavam, me esforcei, estudei, lutei. E mesmo assim, a vida não andava.</p>
     <p>Até que eu entendi: <strong>o problema era o meu interno. Tive que mudar a minha mentalidade e a minha energia.</strong></p>
     <p>O que trava a sua vida não está no que você vê. Está na raiz inconsciente, no seu sistema familiar, na sua mentalidade e na sua energia.</p>
     <p>Dessa descoberta nasceu o <strong>Método Solaryz</strong>, a integração de Mentalidade Sistêmica, Kundalini Solaryz, Psicanálise e Física Quântica em um caminho único. Mais de <strong>2.000 pessoas</strong> no Brasil e no Uruguai já passaram por esse processo.</p>
@@ -257,18 +268,26 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 <footer class="footer">
   <p class="logo">Instituto Solaryz</p>
   <p>São José, SC · Brasil<br>
-  Dúvidas? <a href="https://wa.me/554899090538" target="_blank" rel="noopener">Fale com o suporte no WhatsApp</a></p>
+  Dúvidas? <a href="https://wa.me/554899090538?text=Ol%C3%A1%2C%20estou%20na%20p%C3%A1gina%20do%20Diagn%C3%B3stico%20Solaryz%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Fale com o suporte no WhatsApp</a></p>
 </footer>
 
-<a href="https://wa.me/554899090538" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/554899090538?text=Ol%C3%A1%2C%20estou%20na%20p%C3%A1gina%20do%20Diagn%C3%B3stico%20Solaryz%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener" class="wa-float" id="wa-float" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- SCRIPT DO VÍDEO (No-Cookie e Carregamento Assíncrono com Inteligência) -->
+<!-- STICKY CTA BOTTOM BAR -->
+<div class="sticky-cta" id="sticky-cta">
+  <div class="wrap" style="width: 100%; padding: 0;">
+    <a href="https://chk.eduzz.com/7WXGVB120A" target="_blank" rel="noopener" class="cta">Garantir Meu Horário (R$ 147)</a>
+  </div>
+</div>
+
+<!-- SCRIPT DO VÍDEO & INTERAÇÕES (No-Cookie) -->
 <script>
   var ytPlayer, maxTimeAssistido = 0, isPlayerReady = false;
 
-  // Carrega a API do YouTube em segundo plano para não travar o PageSpeed
+  // Carrega a API do YouTube
   window.addEventListener('DOMContentLoaded', function() {
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
@@ -278,7 +297,7 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
 
   function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player('ytplayer', {
-      host: 'https://www.youtube-nocookie.com', // OTIMIZAÇÃO: Zera os cookies de terceiros
+      host: 'https://www.youtube-nocookie.com',
       videoId: '7ahmj3TNMcI',
       playerVars: { controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1, fs: 0 },
       events: {
@@ -293,7 +312,6 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
       document.getElementById('playOverlay').style.display = 'none';
       ytPlayer.playVideo();
     } else {
-      // Se a pessoa clicar antes do script baixar, ele vira reticências e tenta de novo sozinho
       var icon = document.getElementById('playIcon');
       if (icon) {
         icon.style.borderWidth = '0';
@@ -303,7 +321,7 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
         icon.style.color = '#180f00';
         icon.innerHTML = '...';
       }
-      setTimeout(iniciarVideo, 400); // Tenta dar play automaticamente a cada fração de segundo
+      setTimeout(iniciarVideo, 400);
     }
   }
 
@@ -320,6 +338,21 @@ img{display:block;max-width:100%;height:auto;aspect-ratio:attr(width) / attr(hei
       }, 250);
     }
   }
+
+  // Lógica da Barra Fixa (Sticky CTA)
+  window.addEventListener('scroll', function() {
+    var heroBtn = document.getElementById('hero-cta');
+    var sticky = document.getElementById('sticky-cta');
+    var wa = document.getElementById('wa-float');
+    
+    if(window.scrollY > (heroBtn.offsetTop + 50)) {
+      sticky.classList.add('show');
+      wa.classList.add('lifted');
+    } else {
+      sticky.classList.remove('show');
+      wa.classList.remove('lifted');
+    }
+  });
 </script>
 
 </body>
