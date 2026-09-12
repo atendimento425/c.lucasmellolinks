@@ -49,22 +49,33 @@ a{text-decoration:none;color:inherit}
 .price-row{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:rgba(201,168,76,.05)}
 .price-row+.price-row{border-top:1px solid rgba(201,168,76,.18)}
 .price-label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.price-val{font-family:'Cinzel',serif;font-size:18px;color:var(--gl);font-weight:700;text-align:right;}
-.price-val small{font-family:'Cormorant Garamond',serif; font-size:13px;font-weight:400;color:var(--dim); letter-spacing:0; display:block; margin-top:2px;}
+.price-val{font-family:'Cinzel',serif;font-size:20px;color:var(--gl);font-weight:700;text-align:right;}
+.price-val small{font-family:'Cormorant Garamond',serif; font-size:14px;font-weight:400;color:var(--dim); letter-spacing:0; display:block; margin-top:2px;}
 
 .hero-btn{display:block;width:100%;background:linear-gradient(135deg,var(--gl) 0%,var(--gold) 55%,var(--gd) 100%);color:#180f00;font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-align:center;text-transform:uppercase;padding:18px;border-radius:14px;box-shadow:0 6px 26px rgba(201,168,76,.3)}
 
-/* Depoimentos Imagens - Ajustados para ficarem menores */
+/* DEPOIMENTOS */
 .depo-label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:8px 0 16px;text-align:center}
+.depo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .depo-img {
-  width: 90%; 
-  margin: 0 auto 15px auto;
-  display: block;
+  width: 85%; /* Ajuste o tamanho das imagens aqui, se necessário */
   border-radius: 12px;
   border: 1px solid rgba(201,168,76,.2);
+  display: block;
 }
 
-/* Lista de espera */
+.quote{border:1px solid rgba(201,168,76,.18);background:var(--card);border-radius:14px;padding:20px;width:100%}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--white);line-height:1.55;margin-bottom:10px}
+.quote-author{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+/* LISTA DE ESPERA */
 .links{width:100%;display:flex;flex-direction:column;gap:9px;margin-top:16px}
 .link-row{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border:1px solid rgba(201,168,76,.16);border-radius:15px;transition:border-color .2s}
 .link-row:hover{border-color:rgba(201,168,76,.4)}
@@ -86,7 +97,7 @@ a{text-decoration:none;color:inherit}
 <div class="page">
 
   <div class="avatar">
-    <!-- Coloque a foto dela na mesma pasta e mude o nome do arquivo aqui, se precisar -->
+    <!-- IMAGEM DE PERFIL -->
     <img src="foto-geovana.jpg" alt="Geovana Conrado">
   </div>
   <p class="person-name">Geovana Conrado</p>
@@ -96,6 +107,7 @@ a{text-decoration:none;color:inherit}
     <a href="https://www.instagram.com/ge.conrado/" target="_blank" rel="noopener" class="soc-icon" aria-label="Instagram">
       <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
     </a>
+    <!-- LINK YOUTUBE CORRIGIDO -->
     <a href="https://www.youtube.com/@C.lucasmello" target="_blank" rel="noopener" class="soc-icon" aria-label="YouTube">
       <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
     </a>
@@ -117,11 +129,11 @@ a{text-decoration:none;color:inherit}
     <div class="price-box">
       <div class="price-row">
         <span class="price-label">Individual</span>
-        <span class="price-val">10x R$ 39,70<br><small>ou R$ 397 à vista</small></span>
+        <span class="price-val">10x R$ 39,70<small>ou R$ 397 à vista</small></span>
       </div>
       <div class="price-row">
         <span class="price-label">Grupo VIP</span>
-        <span class="price-val">10x R$ 22,15<br><small>ou R$ 197 à vista</small></span>
+        <span class="price-val">10x R$ 22,15<small>ou R$ 197 à vista</small></span>
       </div>
     </div>
 
@@ -130,12 +142,13 @@ a{text-decoration:none;color:inherit}
 
   <div class="div"></div>
 
-  <!-- DEPOIMENTOS COM AS IMAGENS ENVIADAS -->
+  <!-- DEPOIMENTOS EM IMAGENS -->
   <p class="depo-label">O que dizem nossos alunos</p>
+  <div class="depo-container">
+    <img src="depoimentos ativação da kundalini.jpg" alt="Depoimento sobre melhora do sono e ansiedade" class="depo-img">
+    <img src="depoimentos ativação da kundalini 2.jpg" alt="Depoimento sobre novos pretendentes e mudanças" class="depo-img">
+  </div>
   
-  <img src="depoimentos ativação da kundalini.jpg" alt="Depoimento sobre melhora do sono e ansiedade" class="depo-img">
-  <img src="depoimentos ativação da kundalini 2.jpg" alt="Depoimento sobre novos pretendentes e mudanças" class="depo-img">
-
   <div class="quote">
     <p class="quote-text">"Depois de anos de terapia e medicação, dormi sem remédio pela primeira vez."</p>
     <p class="quote-author">Aluna Solaryz</p>
