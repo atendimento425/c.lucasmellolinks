@@ -49,15 +49,15 @@ a{text-decoration:none;color:inherit}
 .price-row{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:rgba(201,168,76,.05)}
 .price-row+.price-row{border-top:1px solid rgba(201,168,76,.18)}
 .price-label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.price-val{font-family:'Cinzel',serif;font-size:20px;color:var(--gl);font-weight:700;text-align:right;}
-.price-val small{font-family:'Cormorant Garamond',serif; font-size:14px;font-weight:400;color:var(--dim); letter-spacing:0; display:block; margin-top:2px;}
+.price-val{font-family:'Cinzel',serif;font-size:18px;color:var(--gl);font-weight:700;text-align:right;}
+.price-val small{font-family:'Cormorant Garamond',serif; font-size:13px;font-weight:400;color:var(--dim); letter-spacing:0; display:block; margin-top:2px;}
 
 .hero-btn{display:block;width:100%;background:linear-gradient(135deg,var(--gl) 0%,var(--gold) 55%,var(--gd) 100%);color:#180f00;font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-align:center;text-transform:uppercase;padding:18px;border-radius:14px;box-shadow:0 6px 26px rgba(201,168,76,.3)}
 
 /* Depoimentos Imagens - Ajustados para ficarem menores */
 .depo-label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:8px 0 16px;text-align:center}
 .depo-img {
-  width: 80%; /* Deixa o depoimento menor */
+  width: 90%; 
   margin: 0 auto 15px auto;
   display: block;
   border-radius: 12px;
@@ -86,8 +86,85 @@ a{text-decoration:none;color:inherit}
 <div class="page">
 
   <div class="avatar">
-    <img src="data:image/jpeg;base64,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波特兰伐木者上轮比赛在客场和达拉斯FC战成了平局。双方各取一分之后，目前波特兰也是拿到了十个积分，处于联赛第七位的位置。这个赛季波特兰前锋位置进行了人员调整，布莱恩来到了球队。对于现在的波特兰来说，前场得分能力比较依靠边路球员，内线也是存在人员更迭的问题。因此球队上轮也是遭遇了丢球，整体防守不是很好。
+    <!-- Coloque a foto dela na mesma pasta e mude o nome do arquivo aqui, se precisar -->
+    <img src="foto-geovana.jpg" alt="Geovana Conrado">
+  </div>
+  <p class="person-name">Geovana Conrado</p>
+  <p class="brand">Energia · Magnetismo · Vitalidade</p>
 
-温哥华白帽上轮在主场迎战芝加哥。最终也是兵不血刃的在主场拿下了胜利，目前高居联赛西部积分榜第二位。前锋莫尼和中场核心布里亚在上轮比赛各入一球。温哥华在保持主场成绩比较稳定的情况之下。此番远赴客场，应该也会踢得比较保守。
+  <div class="soc-icons">
+    <a href="https://www.instagram.com/ge.conrado/" target="_blank" rel="noopener" class="soc-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@C.lucasmello" target="_blank" rel="noopener" class="soc-icon" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    </a>
+  </div>
 
-就纸面实力来看，目前处于主场的波特兰伐木者和温哥华应该是处于伯仲之间。但就过往战绩来看，反而是温哥华处于绝对优势。结合数据来看，给到了波特兰让步，有强拉波特兰的嫌疑。那么我们不如期待温哥华白帽在客场保持不败，顺利抢分。
+  <div class="div"></div>
+
+  <!-- HERO: ATIVAÇÃO DA KUNDALINI -->
+  <div class="hero-card">
+    <div class="hero-badge">Online e presencial</div>
+    <div class="hero-icon">🔥</div>
+    <div class="hero-title">Ativação da Kundalini</div>
+    <div class="hero-hook">Você venceu e não tem energia para aproveitar.</div>
+    <p class="hero-pain">Ansiedade sem motivo em quem performa alto. Sono que não descansa. Ganhar mais não resolveu. Você conquistou tudo e mesmo assim sente a energia zerada.</p>
+    <p class="hero-desire">A Ativação da Kundalini desperta a sua energia vital adormecida e devolve o que faz você fluir: <strong>magnetismo, clareza e vitalidade</strong> do começo ao fim do dia.</p>
+    <p class="hero-desire">Você se torna magnética, presença que atrai e é procurada em vez de correr atrás. Libera os bloqueios que você já entende mas continua repetindo. E volta a ter disposição, propósito e frequência alta.</p>
+    <p class="hero-feel">Você sente a mudança na primeira sessão.</p>
+
+    <div class="price-box">
+      <div class="price-row">
+        <span class="price-label">Individual</span>
+        <span class="price-val">10x R$ 39,70<br><small>ou R$ 397 à vista</small></span>
+      </div>
+      <div class="price-row">
+        <span class="price-label">Grupo VIP</span>
+        <span class="price-val">10x R$ 22,15<br><small>ou R$ 197 à vista</small></span>
+      </div>
+    </div>
+
+    <a href="https://wa.me/554299276266?text=Quero%20iniciar%20minha%20evolução%20com%20a%20Ativação%20da%20Kundalini" target="_blank" rel="noopener" class="hero-btn">Quero Iniciar Minha Evolução</a>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- DEPOIMENTOS COM AS IMAGENS ENVIADAS -->
+  <p class="depo-label">O que dizem nossos alunos</p>
+  
+  <img src="depoimentos ativação da kundalini.jpg" alt="Depoimento sobre melhora do sono e ansiedade" class="depo-img">
+  <img src="depoimentos ativação da kundalini 2.jpg" alt="Depoimento sobre novos pretendentes e mudanças" class="depo-img">
+
+  <div class="quote">
+    <p class="quote-text">"Depois de anos de terapia e medicação, dormi sem remédio pela primeira vez."</p>
+    <p class="quote-author">Aluna Solaryz</p>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- LISTA DE ESPERA -->
+  <div class="links">
+    <a href="https://wa.me/554299276266?text=Quero%20entrar%20na%20lista%20da%20Formação%20Kundalini%20Solaryz" target="_blank" rel="noopener" class="link-row">
+      <div class="link-left">
+        <span class="link-name">Formação Kundalini Solaryz</span>
+        <span class="link-sub">Torne-se um facilitador da energia</span>
+      </div>
+      <span class="link-tag">Lista de espera</span>
+    </a>
+  </div>
+
+  <div class="footer">
+    Atendimentos <strong>presenciais e online</strong><br>
+    <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Cruz+e+Souza+560+Campinas+São+José+SC" target="_blank" rel="noopener">📍 Av. Cruz e Souza, 560 · Campinas · São José, SC</a><br>
+    <a href="https://instagram.com/ge.conrado" target="_blank" rel="noopener">@ge.conrado</a>
+  </div>
+
+</div>
+
+<a href="https://wa.me/554299276266" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
