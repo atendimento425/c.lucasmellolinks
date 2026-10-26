@@ -98,7 +98,6 @@ p.t strong{color:var(--white);font-weight:500}
 .sticky-cta .cta{margin:0;padding:14px;font-size:14px;max-width:560px;box-shadow:none}
 .wa-float{transition:bottom .3s cubic-bezier(.4,0,.2,1)}
 .wa-float.lifted{bottom:96px}
-#playOverlay img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:.85}#somBtn{display:none;position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:6;background:#C9A84C;color:#180f00;font-weight:600;font-size:14px;padding:10px 16px;border-radius:30px;cursor:pointer;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -109,7 +108,7 @@ p.t strong{color:var(--white);font-weight:500}
   <p class="pre">Sessão individual online</p>
   <h1>Descubra em 1 hora o padrão de <em>mentalidade e energia</em> que trava suas relações e o seu dinheiro.</h1>
   <p class="sub">Uma sessão individual e ao vivo. Você mapeia a sua mentalidade e a sua energia, encontra o ponto exato onde as suas relações e o seu dinheiro se conectam e sai com um plano de ação para os próximos dias.</p>
-  <div class="video" id="videoWrap"><div id="ytplayer"></div><div id="vidBlock"></div><div id="playOverlay" onclick="tocar()"><img src="https://i.ytimg.com/vi/eP3SisB87m0/hqdefault.jpg" alt=""><div class="pbtn"><svg viewBox="0 0 24 24" width="30" height="30"><path fill="#180f00" d="M8 5v14l11-7z"/></svg></div><p class="ovt" id="ovt">Clique para assistir</p></div><div id="somBtn" onclick="ativarSom()">🔊 Toque para ativar o som</div></div>
+  <div class="video" id="videoWrap"><div id="ytplayer"></div><div id="vidBlock" style="display:none"></div></div>
   <a href="https://payfast.greenn.com.br/x6dnd9a/offer/3COZVv?ch_id=144531" target="_blank" rel="noopener" class="cta">Quero agendar meu diagnóstico</a>
   <p class="note" style="font-size:15px;color:var(--gl);margin-bottom:4px"><s style="opacity:.6">R$ 697</s> &nbsp;<strong style="font-size:20px">R$ 147</strong> · Pix ou 10x de R$ 17,58</p>
   <p class="note">Garantia de 7 dias · Pagamento seguro · Você agenda seu horário logo após a compra</p>
@@ -171,13 +170,13 @@ p.t strong{color:var(--white);font-weight:500}
   <span class="eyebrow">Histórias reais</span>
   <h2>Quem encontrou <em>a raiz</em></h2>
   <p class="vcap">"Tive uma virada de chave que mudou a minha vida."</p>
-  <div class="video vert"><iframe src="https://www.youtube-nocookie.com/embed/x5wGDl-PEas?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div>
+  <div class="video vert"><iframe src="https://www.youtube.com/embed/x5wGDl-PEas?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div>
   <div class="vgrid">
-    <div><p class="vcap sm">"Consegui ter clientes e faturar mais."</p><div class="video vert"><iframe src="https://www.youtube-nocookie.com/embed/kDUZQQ7wNzs?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div><p class="who">Carol</p></div>
-    <div><p class="vcap sm">"Minha vida estava travada. Hoje ela começou a fluir."</p><div class="video vert"><iframe src="https://www.youtube-nocookie.com/embed/gx9RCWkUeMg?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div><p class="who">Catarina</p></div>
+    <div><p class="vcap sm">"Consegui ter clientes e faturar mais."</p><div class="video vert"><iframe src="https://www.youtube.com/embed/kDUZQQ7wNzs?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div><p class="who">Carol</p></div>
+    <div><p class="vcap sm">"Minha vida estava travada. Hoje ela começou a fluir."</p><div class="video vert"><iframe src="https://www.youtube.com/embed/gx9RCWkUeMg?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div><p class="who">Catarina</p></div>
   </div>
   <p class="vcap" style="margin-top:22px">"Eu vivia no modo guerreira e entendi o que isso me custava."</p>
-  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/RZHASvzrz74?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div>
+  <div class="video"><iframe src="https://www.youtube.com/embed/RZHASvzrz74?rel=0&playsinline=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Depoimento"></iframe></div>
   <p class="who" style="text-align:center;margin-top:-8px">Gabriele</p>
 
   <p class="area">Dinheiro</p>
@@ -249,12 +248,13 @@ p.t strong{color:var(--white);font-weight:500}
 <script>var _tk=false;window.addEventListener('scroll',function(){if(_tk)return;_tk=true;requestAnimationFrame(function(){_tk=false;upd();});},{passive:true});function upd(){var h=document.querySelector('.hero .cta'),st=document.getElementById('sticky-cta'),wa=document.getElementById('wa-float'),o=document.getElementById('oferta');if(!h||!st)return;var y=window.scrollY,show=y>h.offsetTop+50;if(o){var r=o.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)show=false;}st.classList.toggle('show',show);if(wa)wa.classList.toggle('lifted',show);}</script>
 
 <script>
-var ytPlayer,ready=false,started=false,pend=false,maxT=0,VID='eP3SisB87m0';
+var ytPlayer,ready=false,started=false,maxT=0;
 window.addEventListener('DOMContentLoaded',function(){var t=document.createElement('script');t.src="https://www.youtube.com/iframe_api";t.async=true;document.body.appendChild(t);});
-function onYouTubeIframeAPIReady(){ytPlayer=new YT.Player('ytplayer',{host:'https://www.youtube.com',videoId:VID,playerVars:{controls:0,disablekb:1,modestbranding:1,rel:0,playsinline:1,fs:0,iv_load_policy:3},events:{onReady:function(){ready=true;if(pend){pend=false;tocar();}},onStateChange:onState}});}
-function tocar(){if(!ready){pend=true;document.getElementById('ovt').textContent='Carregando...';return;}started=true;document.getElementById('playOverlay').style.display='none';ytPlayer.unMute();ytPlayer.setVolume(100);ytPlayer.playVideo();setTimeout(function(){if(ytPlayer.getPlayerState()!==1){ytPlayer.mute();ytPlayer.playVideo();document.getElementById('somBtn').style.display='block';}},1200);}
-function ativarSom(){ytPlayer.unMute();ytPlayer.setVolume(100);ytPlayer.playVideo();document.getElementById('somBtn').style.display='none';}
-function onState(e){if(e.data===1){clearInterval(window._g);window._g=setInterval(function(){var a=ytPlayer.getCurrentTime();if(a>maxT+1.5){ytPlayer.seekTo(maxT,true);}else{maxT=a;}},250);}else if(e.data===2&&started){setTimeout(function(){ytPlayer.playVideo();},150);}}
+function onYouTubeIframeAPIReady(){ytPlayer=new YT.Player('ytplayer',{host:'https://www.youtube.com',videoId:'eP3SisB87m0',playerVars:{controls:0,disablekb:1,modestbranding:1,rel:0,playsinline:1,fs:0,iv_load_policy:3},events:{onReady:function(){ready=true;},onStateChange:onState}});}
+function onState(e){var b=document.getElementById('vidBlock');
+ if(e.data===1){if(!started){started=true;ytPlayer.unMute();ytPlayer.setVolume(100);}b.style.display='block';clearInterval(window._g);window._g=setInterval(function(){var a=ytPlayer.getCurrentTime();if(a>maxT+1.5){ytPlayer.seekTo(maxT,true);}else{maxT=a;}},250);}
+ else if(e.data===2&&started){setTimeout(function(){ytPlayer.playVideo();},150);}
+ else if(e.data===0){clearInterval(window._g);b.style.display='none';started=false;maxT=0;}}
 document.addEventListener('visibilitychange',function(){if(!document.hidden&&started&&ready&&ytPlayer.getPlayerState()===2)ytPlayer.playVideo();});
 </script>
 </body>
