@@ -24,10 +24,10 @@ h1 em,h2 em{font-style:italic;color:var(--gold)}
 .video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.3);border-radius:14px;margin-bottom:18px;background:#000}
 .video.vert{padding-bottom:0;height:auto;aspect-ratio:9/16;max-width:320px;margin-left:auto;margin-right:auto}
 .video iframe,.video>#ytplayer{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-#playOverlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(0,0,0,.55);cursor:pointer;z-index:5}
+#playOverlay{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;background:transparent;cursor:pointer;z-index:5}
 #vidBlock{position:absolute;inset:0;z-index:4}
-.ovt{font-family:'Cinzel',serif;font-size:14px;font-weight:700;letter-spacing:1px;color:var(--gl);margin-top:10px}
-.ovs{font-size:13px;color:#fff;opacity:.85}
+.ovpill{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gl),var(--gold));color:#180f00;font-family:'Cinzel',serif;font-weight:700;font-size:12px;letter-spacing:.5px;padding:9px 16px;border-radius:30px;box-shadow:0 4px 18px rgba(0,0,0,.5);animation:pp 2s infinite}
+
 @keyframes pp{0%{box-shadow:0 0 0 0 rgba(201,168,76,.7)}70%{box-shadow:0 0 0 20px rgba(201,168,76,0)}100%{box-shadow:0 0 0 0 rgba(201,168,76,0)}}
 .pbtn{width:68px;height:68px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;animation:pp 2s infinite}
 .tri{width:0;height:0;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent #180f00;margin-left:6px}
@@ -108,7 +108,7 @@ p.t strong{color:var(--white);font-weight:500}
   <p class="pre">Sessão individual online</p>
   <h1>Descubra em 1 hora o padrão de <em>mentalidade e energia</em> que trava suas relações e o seu dinheiro.</h1>
   <p class="sub">Uma sessão individual e ao vivo. Você mapeia a sua mentalidade e a sua energia, encontra o ponto exato onde as suas relações e o seu dinheiro se conectam e sai com um plano de ação para os próximos dias.</p>
-  <div class="video" id="videoWrap"><div id="ytplayer"></div><div id="vidBlock"></div><div id="playOverlay" onclick="ativarSom()"><div class="pbtn"><svg viewBox="0 0 24 24" width="30" height="30"><path fill="#180f00" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></div><p class="ovt">Seu vídeo já começou</p><p class="ovs">Clique para ouvir</p></div></div>
+  <div class="video" id="videoWrap"><div id="ytplayer"></div><div id="vidBlock"></div><div id="playOverlay" onclick="ativarSom()"><div class="ovpill"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="#180f00" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span>Toque para ativar o som</span></div></div></div>
   <a href="https://payfast.greenn.com.br/x6dnd9a/offer/3COZVv?ch_id=144531" target="_blank" rel="noopener" class="cta">Quero agendar meu diagnóstico</a>
   <p class="note" style="font-size:15px;color:var(--gl);margin-bottom:4px"><s style="opacity:.6">R$ 697</s> &nbsp;<strong style="font-size:20px">R$ 147</strong> · Pix ou 10x de R$ 17,58</p>
   <p class="note">Garantia de 7 dias · Pagamento seguro · Você agenda seu horário logo após a compra</p>
@@ -249,7 +249,7 @@ p.t strong{color:var(--white);font-weight:500}
 <script>
 var ytPlayer,maxT=0,ready=false,som=false;
 window.addEventListener('DOMContentLoaded',function(){var t=document.createElement('script');t.src="https://www.youtube.com/iframe_api";t.async=true;document.body.appendChild(t);});
-function onYouTubeIframeAPIReady(){ytPlayer=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',videoId:'eP3SisB87m0',playerVars:{autoplay:1,mute:1,controls:0,disablekb:1,modestbranding:1,rel:0,playsinline:1,fs:0,iv_load_policy:3},events:{onReady:function(){ready=true;ytPlayer.mute();ytPlayer.playVideo();},onStateChange:onState}});}
+function onYouTubeIframeAPIReady(){ytPlayer=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',videoId:'8v4K1cNIplY',playerVars:{autoplay:1,mute:1,controls:0,disablekb:1,modestbranding:1,rel:0,playsinline:1,fs:0,iv_load_policy:3},events:{onReady:function(){ready=true;ytPlayer.mute();ytPlayer.playVideo();},onStateChange:onState,onPlaybackRateChange:function(){if(ytPlayer.getPlaybackRate()!==1)ytPlayer.setPlaybackRate(1);}}});}
 function ativarSom(){if(!ready){setTimeout(ativarSom,300);return;}som=true;maxT=0;ytPlayer.seekTo(0,true);ytPlayer.unMute();ytPlayer.setVolume(100);ytPlayer.playVideo();document.getElementById('playOverlay').style.display='none';}
 function onState(e){if(e.data===YT.PlayerState.PLAYING){clearInterval(window._g);window._g=setInterval(function(){var a=ytPlayer.getCurrentTime();if(a>maxT+1.5){ytPlayer.seekTo(maxT,true);}else{maxT=a;}},250);}else if(e.data===YT.PlayerState.PAUSED){if(som){setTimeout(function(){ytPlayer.playVideo();},150);}else{ytPlayer.playVideo();}}}
 document.addEventListener('visibilitychange',function(){if(!document.hidden&&ready&&ytPlayer.getPlayerState()===2)ytPlayer.playVideo();});
